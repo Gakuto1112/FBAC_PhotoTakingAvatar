@@ -132,6 +132,6 @@ vanilla_model.PLAYER:setVisible(false)
 
 - このアバターが想定しているFigura 0.1.5bでは読み込めるBlockBenchのモデルフォーマットがv4.12.6までのものです。
   最新（v5.1.4）のモデルのフォーマットではFiguraが読み込めませんので、読み込めるバージョンまでBlockBenchをダウングレードさせるか、レガシーなモデル形式で保存するようにしてください。
+- このレポジトリのソースコードやFBACアバターを使用して撮影した写真の使い道は常識の範囲内で自由にしてもらっても構いませんが、本レポジトリの[ライセンス](./LICENSE)には遵守してください。
 - このアバターを使用して発生した、いかなる損害の責任も負いかねます。
-- このアバターやFBACアバターを使用して撮影した写真の使い道は常識の範囲内で自由にしてもらっても構いませんが、[FBACのライセンス](https://github.com/Gakuto1112/FiguraBlueArchiveCrafters/blob/main/LICENSE)や[ブルーアーカイブの二次創作ガイドライン](https://bluearchive.jp/fankit/guidelines)を遵守するようにしてください。
 - 不明点や不具合がありましたら、[Issues](https://github.com/Gakuto1112/FBAC_PhotoTakingAvatar/issues)や[Discussions](https://github.com/Gakuto1112/FBAC_PhotoTakingAvatar/discussions)やまでご連絡下さい。
