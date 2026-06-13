@@ -1,1 +1,4 @@
 .vscode/
+.DS_Store
+avatar.code-workspace
+.luarc.json

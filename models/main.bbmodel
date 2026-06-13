@@ -1,0 +1,37 @@
+{
+	"meta": {
+		"format_version": "4.10",
+		"model_format": "free",
+		"box_uv": false
+	},
+	"name": "main",
+	"model_identifier": "",
+	"visible_box": [1, 1, 0],
+	"variable_placeholders": "",
+	"variable_placeholder_buttons": [],
+	"timeline_setups": [],
+	"unhandled_root_fields": {},
+	"resolution": {
+		"width": 256,
+		"height": 256
+	},
+	"elements": [],
+	"outliner": [
+		{
+			"name": "World",
+			"origin": [0, 0, 0],
+			"rotation": [7.5, 0, 0],
+			"color": 0,
+			"uuid": "dbd001da-bf62-1359-efb0-7e3842e8ad6a",
+			"export": true,
+			"mirror_uv": false,
+			"isOpen": true,
+			"locked": false,
+			"visibility": true,
+			"autouv": 0,
+			"selected": false,
+			"children": []
+		}
+	],
+	"textures": []
+}
