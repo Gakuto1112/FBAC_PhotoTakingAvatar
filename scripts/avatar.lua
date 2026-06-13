@@ -22,6 +22,13 @@ local function resetModelParent(model)
 	end
 end
 
+---初期化時に実行されるコールバック関数
+local function onInit()
+	-- ここに追加の処理を書く。
+
+
+end
+
 ---初期化関数
 local function init()
 	local screenSplitLines = require("scripts.screen_split_line")
@@ -37,6 +44,8 @@ local function init()
 			modelPart:setLight(world.getBlockLightLevel(pos), world.getSkyLightLevel(pos))
 		end
 	end)
+
+	onInit()
 end
 
 init()
