@@ -26,7 +26,7 @@
 - FBACキャラクター自体やヘイローのライティング処理を自動化します。
 - 撮影時に便利な分割線（縦横それぞれ3分割）が表示されます。
   - F1キーでUIを消すと一緒に隠れます。
-  - 分割線を増減させたい場合は、[`src/scripts/screen_split_line.lua`](https://github.com/Gakuto1112/FBAC_PhotoTakingAvatar/blob/main/src/scripts/screen_split_line.lua)内の`X_COUNT`および`Y_COUNT`を変更してください。
+  - 分割線を増減させたい場合は、[`src/scripts/screen_split_line.lua`](./src/scripts/screen_split_line.lua)内の`X_COUNT`および`Y_COUNT`を変更してください。
 
 ## 使い方
 
