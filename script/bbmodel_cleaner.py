@@ -30,6 +30,24 @@ def read_bbmodel(bbmodel_path: Path) -> BBModelData:
     with bbmodel_path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
+def write_bbmodel_data(bbmodel_path: Path, bbmodel_data: BBModelData) -> None:
+    """
+    指定されたパスのBBModelファイルに、指定されたデータを書き込む。
+    BBModelのフォーマットに合うようにJSON整形も行う。
+
+    Args:
+        bbmodel_path (Path): 書き込むBBModelファイルのパス
+        bbmodel_data (BBModelData): 書き込むBBModelデータを格納した辞書
+
+    Raises:
+        IsADirectoryError: 指定されたパスがディレクトリである場合
+        PermissionError: 指定されたパスのファイルに対する書き込み権限がない場合
+        IOError: その他の入出力エラーが発生した場合
+    """
+
+    with bbmodel_path.open("w", encoding="utf-8") as f:
+        json.dump(bbmodel_data, f, ensure_ascii=False, indent=4)
+
 def remove_texture_absolute_paths(bbmodel_data: BBModelData) -> BBModelData:
     """
     BBModelデータ内のテクスチャの絶対パスを削除し、変更後のBBModelデータを返す。
