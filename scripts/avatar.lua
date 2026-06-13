@@ -1,5 +1,11 @@
 ---撮影アバターの基準ワールド座標
+---@type Vector3
 BASE_POS = vectors.vec3(0, 0, 0)
+
+---ワールドに配置したキャラクターのライティング判定基準点のオフセット座標
+---キャラクターが暗くなってしまう場合はこのオフセット値のY座標を上げると解決する場合がある。
+---@type Vector3
+CHARACTER_LIGHTING_BASE_POINT_OFFSET = vectors.vec3(0, 0, 0)
 
 ---モデルの親タイプをリセットする。
 ---指定したモデルのサブモデルも対象となる。
@@ -27,7 +33,7 @@ local function init()
 	end
 	events.TICK:register(function ()
 		for _, modelPart in ipairs(models.models.main.World:getChildren()) do
-			local pos = BASE_POS:copy():add(modelPart:getPivot():scale(1 / 16):mul(-1, 1, 1))
+			local pos = BASE_POS:copy():add(modelPart:getPivot():scale(1 / 16):mul(-1, 1, 1):add(CHARACTER_LIGHTING_BASE_POINT_OFFSET))
 			modelPart:setLight(world.getBlockLightLevel(pos), world.getSkyLightLevel(pos))
 		end
 	end)
