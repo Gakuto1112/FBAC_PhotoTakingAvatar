@@ -1,0 +1,47 @@
+# License / 利用規約
+
+## 1. Overview & MIT License / 概要とMITライセンス
+
+This repository contains the source code for the auxiliary avatar designed to facilitate photography using characters from "Figura Blue Archive Crafters (FBAC)."
+
+本レポジトリには、「Figura Blue Archive Crafters (FBAC)」のキャラクターを用いた写真撮影を補助するアバター（以下、本ソフトウェア）のソースコードが含まれています。
+
+- **Code License:** The source code in this repository is licensed under the **MIT License**. You are free to use, modify, and distribute it in accordance with the MIT License terms provided below.
+- **ソースコードのライセンス:** 本レポジトリ内のソースコードについては、**MITライセンス**の下で自由に利用、改変、再配布が可能です。
+
+## 2. Terms of Use for Related Content / 関連コンテンツの利用規約・ガイドライン
+
+While the source code itself is open-source, this software is intended to be used alongside "Figura Blue Archive Crafters (FBAC)". Therefore, users must comply with the following terms:
+
+ソースコード自体は自由にご利用いただけますが、本ソフトウェアは「Figura Blue Archive Crafters (FBAC)」との併用を想定しているため、利用の際は以下の規約を遵守する必要があります。
+
+### 2.1. FBAC Main License / FBAC本体のライセンス
+
+- The FBAC project itself has its own distinct license. When utilizing FBAC characters or assets, you must strictly adhere to the terms specified in the main FBAC repository.
+- 本ソフトウェアと一緒に使用するFBAC本体には、独自の利用規約（ライセンス）が定められています。FBACのキャラクターやアセットを利用する際は、本体リポジトリの規約を必ず遵守してください。
+- **FBAC Main Repository:** <https://github.com/Gakuto1112/FiguraBlueArchiveCrafters>
+
+### 2.2. Blue Archive Secondary Creation Guidelines / ブルーアーカイブ 二次創作ガイドライン
+
+- FBAC and this auxiliary avatar are fan-made secondary creations based on "Blue Archive" owned by NEXON Games Co., Ltd. & Yostar, Inc.
+- FBACおよび本ソフトウェアは、NEXON Games Co., Ltd. および Yostar, Inc. が権利を所有する「ブルーアーカイブ」の二次創作コンテンツです。
+- All rights to character designs and related visual assets belong to the official copyright holders. Any use of this software or FBAC must strictly comply with the official secondary creation guidelines.
+- キャラクターデザイン等の知的財産権はすべて公式に帰属します。本ソフトウェアやFBACを用いて活動（写真撮影や二次創作の公開など）を行う際は、公式の二次創作ガイドラインを厳守してください。
+
+**Official Guidelines (JP):** <https://bluearchive.jp/fankit/guidelines>
+
+## 3. Disclaimer / 免責事項
+
+- This is an unofficial fan project and is not affiliated with or endorsed by NEXON Games or Yostar.
+- 本プロジェクトは非公式のファンプロジェクトであり、NEXON Games社およびYostar社とは一切関係ありません 。
+- The software is provided "as is," without warranty of any kind. The author (Gakuto1112) is not responsible for any issues or damages arising from the use of this project.
+- 本ソフトウェアは「現状のまま」提供され、いかなる保証もいたしません 。作者（Gakuto1112）は、本ソフトウェアの使用によって生じた問題や損害に対して一切の責任を負いません 。
+
+## 4. Software License (MIT)
+
+Copyright (c) 2026 Gakuto1112c
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: 
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
