@@ -7,13 +7,13 @@
 
 ## 作例
 
-![作例1](./docs/images/readme/example_1.jpg)
+![作例1](./docs/images/readme/examples/example_1.jpg)
 
-![作例2](./docs/images/readme/example_2.jpg)
+![作例2](./docs/images/readme/examples/example_2.jpg)
 
-![作例3](./docs/images/readme/example_3.jpg)
+![作例3](./docs/images/readme/examples/example_3.jpg)
 
-![作例4](./docs/images/readme/example_4.jpg)
+![作例4](./docs/images/readme/examples/example_4.jpg)
 
 ## 使い方
 
