@@ -20,7 +20,6 @@
 		{
 			"name": "World",
 			"origin": [0, 0, 0],
-			"rotation": [7.5, 0, 0],
 			"color": 0,
 			"uuid": "dbd001da-bf62-1359-efb0-7e3842e8ad6a",
 			"export": true,
@@ -29,7 +28,7 @@
 			"locked": false,
 			"visibility": true,
 			"autouv": 0,
-			"selected": false,
+			"selected": true,
 			"children": []
 		}
 	],
