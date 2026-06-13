@@ -49,5 +49,20 @@ def remove_texture_absolute_paths(bbmodel_data: BBModelData) -> BBModelData:
 
     return bbmodel_data
 
+def cleanup_bbmodel(bbmodel_data: BBModelData) -> BBModelData:
+    """
+    BBモデルファイルの構造から無駄なデータを省き、クリーンアップする。
+
+    Args:
+        bbmodel_data (BBModelData): クリーンアップするBBモデルデータ
+
+    Returns:
+        BBModelData: クリーンアップされたBBモデルデータ
+    """
+
+    cleaned_data = remove_texture_absolute_paths(bbmodel_data)
+
+    return cleaned_data
+
 if __name__ == "__main__":
     main()
