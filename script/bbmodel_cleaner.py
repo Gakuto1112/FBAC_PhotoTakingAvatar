@@ -1,7 +1,15 @@
 import json
 from pathlib import Path
+from typing import Any, TypeAlias
 
-def read_bbmodel(bbmodel_path: Path) -> dict:
+
+BBModelData: TypeAlias = dict[str, Any]
+"""
+BBモデルのデータであると示す型エイリアス
+"""
+
+
+def read_bbmodel(bbmodel_path: Path) -> BBModelData:
     """
     指定されたパスのBBModelファイルを読み込み、そのデータを辞書型で返す。
 
@@ -9,7 +17,7 @@ def read_bbmodel(bbmodel_path: Path) -> dict:
         bbmodel_path (Path): 読み込むBBModelファイルのパス
 
     Returns:
-        dict: 読み込んだBBModelファイルのデータを格納した辞書
+        BBModelData: 読み込んだBBModelファイルのデータを格納した辞書
 
     Raises:
         FileNotFoundError: 指定されたパスにBBModelファイルが存在しない場合
