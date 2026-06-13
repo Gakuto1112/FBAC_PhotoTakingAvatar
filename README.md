@@ -98,3 +98,22 @@
 | Complementary Shaders - Unbound | 実際にシェーダーを定義するパックの1つです。グラフィックが綺麗かつ自由にカスタマイズができるので特におすすめです。<br>なお、マインクラフトのバニラの雰囲気とバランスを取りたいなと感じる場合は[Complementary Shaders - Reimagined](https://modrinth.com/shader/complementary-reimagined)を使用してください。 | <https://modrinth.com/shader/complementary-unbound> |
 | Fabrishot | ゲームのウィンドウサイズやモニターの解像度に関係なく4K画像や任意の解像度の画像のスクリーンショットを撮影できます。 | <https://modrinth.com/mod/fabrishot> |
 | Freecam | プレイヤーの視点からカメラを外し、そのまま自由にカメラを動かせます。<br>写真の撮影位置を決めた後に、改めて俯瞰視点などから現場の様子を確認できます。 | <https://modrinth.com/mod/freecam> |
+
+## トラブルシューティング
+
+写真撮影中に困ったことが起きたら、まずはこちらを確認してください。
+
+### モデルファイルが読み込まれない
+
+Figura 0.1.5bまでは、BlockBench v4.12.6の形式のモデルファイルしか読み込めません（2026/06/13現在、最新バージョンはv5.1.4）。
+このバージョンまでBlockBenchをダウングレードするか、レガシーなモデル形式で保存するようにしてください。
+
+### 周りは明るいのにキャラクターだけ黒くなる
+
+キャラクターの足元付近がフルブロックで埋まるとそのようになります。
+
+[`src/scripts/avatar.lua`](https://github.com/Gakuto1112/FBAC_PhotoTakingAvatar/blob/main/src/scripts/avatar.lua)内の`CHARACTER_LIGHTING_BASE_POINT_OFFSET`において、Y座標を上げる（〜1程度）と改善されます。
+
+### ヘイローが上下にアニメーションしない
+
+静止画の撮影を想定しているため、ヘイローが上下に浮遊するアニメーションは省略しています。
