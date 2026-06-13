@@ -30,5 +30,24 @@ def read_bbmodel(bbmodel_path: Path) -> BBModelData:
     with bbmodel_path.open("r", encoding="utf-8") as f:
         return json.load(f)
 
+def remove_texture_absolute_paths(bbmodel_data: BBModelData) -> BBModelData:
+    """
+    BBModelデータ内のテクスチャの絶対パスを削除し、変更後のBBModelデータを返す。
+    BBModelデータ内のテクスチャには相対パスもあるため、絶対パスは不要である。
+
+    Args:
+        bbmodel_data (BBModelData): テクスチャの絶対パスを削除するBBModelデータ
+
+    Returns:
+        BBModelData: テクスチャの絶対パスが削除されたBBModelデータ
+    """
+
+    if "textures" in bbmodel_data:
+        for texture in bbmodel_data["textures"]:
+            if "path" in texture:
+                del texture["path"]
+
+    return bbmodel_data
+
 if __name__ == "__main__":
     main()
