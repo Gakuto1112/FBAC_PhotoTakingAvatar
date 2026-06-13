@@ -15,6 +15,19 @@
 
 ![作例4](./docs/images/readme/examples/example_4.jpg)
 
+## ヘルパーアバターでできること
+
+このヘルパーアバターを使用して写真撮影するにあたり、以下の恩恵を受けられます。
+
+- FBACキャラクターをワールド上の任意の位置に固定可能。
+  - プレイヤー自身がカメラマンとなって、自由な位置から写真撮影ができます。
+- FBACキャラクターに元々付いていた頭や四肢のプレイヤーキャラクター連動を無効化します。
+  - プレイヤーが動いてもFBACキャラクターが奇妙にジタバタすることがない、ということです。
+- FBACキャラクター自体やヘイローのライティング処理を自動化します。
+- 撮影時に便利な分割線（縦横それぞれ3分割）が表示されます。
+  - F1キーでUIを消すと一緒に隠れます。
+  - 分割線を増減させたい場合は、[`src/scripts/screen_split_line.lua`](https://github.com/Gakuto1112/FBAC_PhotoTakingAvatar/blob/main/src/scripts/screen_split_line.lua)内の`X_COUNT`および`Y_COUNT`を変更してください。
+
 ## 使い方
 
 1. `src/`配下のファイル/ディレクトリ群は[Figuraアバターの形式](https://docs.figuramc.org/start_here/Avatar%20File%20Format)になっています。
