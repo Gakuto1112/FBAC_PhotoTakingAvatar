@@ -33,8 +33,10 @@ def read_bbmodel(bbmodel_path: Path) -> BBModelData:
         json.JSONDecodeError: BBModelファイルの内容が有効なJSON形式でない場合
     """
 
+    Logger.print_debug(f"Reading BBModel file: {bbmodel_path}...")
     with bbmodel_path.open("r", encoding="utf-8") as f:
         return json.load(f)
+    Logger.print_debug(f"Completed reading BBModel file: {bbmodel_path}.")
 
 def write_bbmodel_data(bbmodel_path: Path, bbmodel_data: BBModelData) -> None:
     """
@@ -51,8 +53,10 @@ def write_bbmodel_data(bbmodel_path: Path, bbmodel_data: BBModelData) -> None:
         IOError: その他の入出力エラーが発生した場合
     """
 
+    Logger.print_debug(f"Writing BBModel data to file: {bbmodel_path}...")
     with bbmodel_path.open("w", encoding="utf-8") as f:
         f.write(format_bbmodel_to_json(bbmodel_data))
+    Logger.print_debug(f"Completed writing BBModel data to file: {bbmodel_path}.")
 
 def format_bbmodel_to_json(bbmodel_data: BBModelData) -> str:
     """
@@ -85,8 +89,10 @@ def format_bbmodel_to_json(bbmodel_data: BBModelData) -> str:
             substring = substring.replace(",", ", ")
         return substring
 
+    Logger.print_debug("Formatting BBModel data to JSON string...")
     json_string = json.dumps(bbmodel_data, ensure_ascii=False, indent="\t")
     json_string = re.sub(r"\[[^\[\]{}]+\]", replacer, json_string)
+    Logger.print_debug("Completed formatting BBModel data to JSON string.")
 
     return json_string
 
@@ -102,10 +108,12 @@ def remove_texture_absolute_paths(bbmodel_data: BBModelData) -> BBModelData:
         BBModelData: テクスチャの絶対パスが削除されたBBModelデータ
     """
 
+    Logger.print_debug("Removing absolute paths from textures in BBModel data...")
     if "textures" in bbmodel_data:
         for texture in bbmodel_data["textures"]:
             if "path" in texture:
                 del texture["path"]
+    Logger.print_debug("Completed removing absolute paths from textures in BBModel data.")
 
     return bbmodel_data
 
@@ -120,7 +128,9 @@ def cleanup_bbmodel(bbmodel_data: BBModelData) -> BBModelData:
         BBModelData: クリーンアップされたBBモデルデータ
     """
 
+    Logger.print_debug("Cleaning up BBModel data...")
     cleaned_data = remove_texture_absolute_paths(bbmodel_data)
+    Logger.print_debug("Completed cleaning up BBModel data.")
 
     return cleaned_data
 
