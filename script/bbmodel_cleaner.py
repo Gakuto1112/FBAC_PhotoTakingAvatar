@@ -112,6 +112,7 @@ def main() -> None:
     Logger.print_info("Model cleaner script for BlockBench models (.bbmodel)")
     Logger.print_spacer(1)
 
+    # デバッグ出力
     if Logger.should_print_debug_log:
         Logger.print_debug(f"Debug output enabled.")
         Logger.print_spacer(1)
@@ -122,6 +123,12 @@ def main() -> None:
         Logger.print_error("Test output for error level log.")
         Logger.print_spacer(1)
 
+    Logger.print_debug(f"Input directory: {paths.input_dir}")
+    Logger.print_debug(f"Output directory: {paths.output_dir}")
+    Logger.print_debug(f"Colored output: {'enabled' if Logger.is_colored else 'disabled'}")
+    Logger.print_spacer(1)
+
+    # 出力ディレクトリの準備
     try:
         if not paths.output_dir.exists():
             Logger.print_info("Output directory does not exist. Attempting to create it...")
