@@ -1,11 +1,11 @@
 ---撮影アバターの基準ワールド座標
 ---@type Vector3
-BASE_POS = vectors.vec3(0, 0, 0)
+local BASE_POS = vectors.vec3(0, 0, 0)
 
 ---ワールドに配置したキャラクターのライティング判定基準点のオフセット座標
 ---キャラクターが暗くなってしまう場合はこのオフセット値のY座標を上げると解決する場合がある。
 ---@type Vector3
-CHARACTER_LIGHTING_BASE_POINT_OFFSET = vectors.vec3(0, 0, 0)
+local CHARACTER_LIGHTING_BASE_POINT_OFFSET = vectors.vec3(0, 0, 0)
 
 ---モデルの親タイプをリセットする。
 ---指定したモデルのサブモデルも対象となる。
