@@ -41,7 +41,10 @@ class Logger:
 		INFOレベルのメッセージを標準出力する。
 		"""
 
-		print(message)
+		if Logger.is_colored:
+			print(f"\033[1m[INFO]\033[0m {message}")
+		else:
+			print(f"[INFO] {message}")
 		Logger._last_spacer_count = 0
 
 	@staticmethod
