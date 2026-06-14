@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any, TypeAlias
 
 from modules.logger import Logger
+from modules.paths import paths
 
 
 BBModelData: TypeAlias = dict[str, Any]
@@ -93,11 +94,15 @@ def main() -> None:
     # 引数の設定
     parser = argparse.ArgumentParser(description="Cleans up a BBModel file by removing unnecessary data.")
 
+    parser.add_argument("-i", "--input-dir", type=str, default=paths.input_dir, help="Overrides default input directory path. Default: ../src/models/")
+    parser.add_argument("-o", "--output-dir", type=str, default=paths.output_dir, help="Overrides default output directory path. Default: ../src/models/")
     parser.add_argument("-c", "--colored", action="store_true", help="Enables colored output in the terminal.")
 
     args = parser.parse_args()
 
     # 引数の処理
+    paths.input_dir = Path(args.input_dir)
+    paths.output_dir = Path(args.output_dir)
     if args.colored:
         Logger.is_colored = True
 
