@@ -3,6 +3,7 @@ import errno
 import json
 from pathlib import Path
 from typing import Any, TypeAlias
+import re
 
 from modules.logger import Logger
 from modules.paths import paths
@@ -51,7 +52,43 @@ def write_bbmodel_data(bbmodel_path: Path, bbmodel_data: BBModelData) -> None:
     """
 
     with bbmodel_path.open("w", encoding="utf-8") as f:
-        json.dump(bbmodel_data, f, ensure_ascii=False, indent=4)
+        f.write(format_bbmodel_to_json(bbmodel_data))
+
+def format_bbmodel_to_json(bbmodel_data: BBModelData) -> str:
+    """
+    BBModelデータをJSON形式の文字列に変換する。
+    BBModelファイルのJSON形式に合うように整形も行う。
+
+    Args:
+        bbmodel_data (BBModelData): JSON形式の文字列に変換するBBModelデータを格納した辞書
+
+    Returns:
+        str: BBModelデータをJSON形式に変換した文字列
+    """
+
+    def replacer(match: re.Match) -> str:
+        """
+        BBModelのJSON配列/オブジェクトのリプレイサー関数。
+        配列やオブジェクトの文字数が118文字以下の場合は、改行とスペースを削除して1行にまとめる。
+        118文字を超える場合は、元の文字列をそのまま返す。
+
+        Args:
+            match (re.Match): 正規表現のマッチオブジェクト
+
+        Returns:
+            str: 整形された文字列
+        """
+
+        substring = match.group(0)
+        substring = re.sub(r"\n\s*", "", substring)
+        if len(substring) <= 118:
+            substring = substring.replace(",", ", ")
+        return substring
+
+    json_string = json.dumps(bbmodel_data, ensure_ascii=False, indent="\t")
+    json_string = re.sub(r"\[[^\[\]{}]+\]", replacer, json_string)
+
+    return json_string
 
 def remove_texture_absolute_paths(bbmodel_data: BBModelData) -> BBModelData:
     """
