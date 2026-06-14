@@ -22,6 +22,14 @@ local function resetModelParent(model)
 	end
 end
 
+---指定したモデルのワールド位置を返す。
+---@param model ModelPart ワールド位置を取得するモデルパーツ
+---@return Vector3 worldPos モデルのワールド位置
+local function getModelWorldPos(model)
+	local modelMatrix = model:partToWorldMatrix()
+	return vectors.vec3(modelMatrix[4][1], modelMatrix[4][2], modelMatrix[4][3])
+end
+
 ---初期化時に実行されるコールバック関数
 local function onInit()
 	-- ここに追加の処理を書く。
