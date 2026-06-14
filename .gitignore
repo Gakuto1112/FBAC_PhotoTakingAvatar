@@ -2,3 +2,6 @@
 .DS_Store
 avatar.code-workspace
 .luarc.json
+
+# Python
+__pycache__

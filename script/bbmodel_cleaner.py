@@ -1,6 +1,9 @@
+import argparse
 import json
 from pathlib import Path
 from typing import Any, TypeAlias
+
+from modules.logger import Logger
 
 
 BBModelData: TypeAlias = dict[str, Any]
@@ -81,6 +84,24 @@ def cleanup_bbmodel(bbmodel_data: BBModelData) -> BBModelData:
     cleaned_data = remove_texture_absolute_paths(bbmodel_data)
 
     return cleaned_data
+
+def main() -> None:
+    """
+    エントリー関数
+    """
+
+    # 引数の設定
+    parser = argparse.ArgumentParser(description="Cleans up a BBModel file by removing unnecessary data.")
+
+    parser.add_argument("-c", "--colored", action="store_true", help="Enables colored output in the terminal.")
+
+    args = parser.parse_args()
+
+    # 引数の処理
+    if args.colored:
+        Logger.is_colored = True
+
+    Logger.print_info("Model cleaner script for BlockBench models (.bbmodel)")
 
 if __name__ == "__main__":
     main()
