@@ -1,4 +1,5 @@
 import argparse
+import errno
 import json
 from pathlib import Path
 from typing import Any, TypeAlias
@@ -97,6 +98,7 @@ def main() -> None:
     parser.add_argument("-i", "--input-dir", type=str, default=paths.input_dir, help="Overrides default input directory path. Default: ../src/models/")
     parser.add_argument("-o", "--output-dir", type=str, default=paths.output_dir, help="Overrides default output directory path. Default: ../src/models/")
     parser.add_argument("-c", "--colored", action="store_true", help="Enables colored output in the terminal.")
+    parser.add_argument("-d", "--debug-output", action="store_true", help="Enables debug outputs.")
 
     args = parser.parse_args()
 
@@ -105,8 +107,35 @@ def main() -> None:
     paths.output_dir = Path(args.output_dir)
     if args.colored:
         Logger.is_colored = True
-
+    if args.debug_output:
+        Logger.should_print_debug_log = True
     Logger.print_info("Model cleaner script for BlockBench models (.bbmodel)")
+    Logger.print_spacer(1)
+
+    if Logger.should_print_debug_log:
+        Logger.print_debug(f"Debug output enabled.")
+        Logger.print_spacer(1)
+
+        Logger.print_debug("Test output for debug level log.")
+        Logger.print_info("Test output for info level log.")
+        Logger.print_warning("Test output for warning level log.")
+        Logger.print_error("Test output for error level log.")
+        Logger.print_spacer(1)
+
+    try:
+        if not paths.output_dir.exists():
+            Logger.print_info("Output directory does not exist. Attempting to create it...")
+            paths.prepare_output_directory()
+            Logger.print_spacer(1)
+    except ValueError:
+        Logger.print_error(f"Invalid path for output directory: {paths.output_dir}")
+        exit(errno.EINVAL)
+    except PermissionError:
+        Logger.print_error("No permission to create output directory.")
+        exit(errno.EACCES)
+    except IOError as error:
+        Logger.print_error(f"An unexpected error occurred while preparing the output directory: {error}")
+        exit(errno.EIO)
 
 if __name__ == "__main__":
     main()
