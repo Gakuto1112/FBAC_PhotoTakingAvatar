@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from pathlib import Path
 
+from modules.logger import Logger
+
 
 @dataclass
 class AvatarPaths:
@@ -67,7 +69,12 @@ class AvatarPaths:
 			IOError: その他の入出力エラーが発生した場合
 		"""
 
+		Logger.print_debug("Checking if output directory exists...")
 		if not paths.output_dir.exists():
+			Logger.print_debug("Output directory does not exist. Trying to create it...")
 			paths.output_dir.mkdir(parents=True, exist_ok=True)
+			Logger.print_debug("Output directory created successfully.")
+		else:
+			Logger.print_debug("Output directory already exists. No need to create it.")
 
 paths = AvatarPaths()
