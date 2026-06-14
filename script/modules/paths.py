@@ -6,7 +6,7 @@ from modules.logger import Logger
 
 @dataclass
 class AvatarPaths:
-	root: Path = Path(__file__).parent.resolve()
+	root: Path = Path(__file__).parent.parent.parent.resolve()
 	"""
 	レポジトリのルートディレクトリ
 	"""
