@@ -144,5 +144,24 @@ def main() -> None:
         Logger.print_error(f"An unexpected error occurred while preparing the output directory: {error}")
         exit(errno.EIO)
 
+    # BBモデルファイルのクリーンアップ
+    for bbmodel_path in paths.input_dir.rglob("*.bbmodel"):
+        Logger.print_info(f"Cleaning up bbmodel file: {bbmodel_path.name}...")
+        try:
+            bbmodel_data = read_bbmodel(bbmodel_path)
+            cleaned_data = cleanup_bbmodel(bbmodel_data)
+            write_bbmodel_data(paths.output_dir / bbmodel_path.name, cleaned_data)
+        except FileNotFoundError:
+            Logger.print_error(f"BBModel file not found: {bbmodel_path}")
+        except IsADirectoryError:
+            Logger.print_error(f"Expected a file but found a directory: {bbmodel_path}")
+        except PermissionError:
+            Logger.print_error(f"No permission to read or write the file: {bbmodel_path}")
+        except IOError as error:
+            Logger.print_error(f"An unexpected error occurred while processing the file {bbmodel_path}: {error}")
+        except json.JSONDecodeError:
+            Logger.print_error(f"Invalid JSON format in BBModel file: {bbmodel_path}")
+    Logger.print_info("Completed cleaning up BBModel files.")
+
 if __name__ == "__main__":
     main()
