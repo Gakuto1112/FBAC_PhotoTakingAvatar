@@ -2,9 +2,3 @@
 .DS_Store
 avatar.code-workspace
 .luarc.json
-
-# Python
-__pycache__
-
-# 出力先ディレクトリ
-dist/
