@@ -2,7 +2,7 @@
 	"name": "FBAC写真撮影用アバター",
 	"description": "FBACアバターを用いて写真撮影をするためのヘルパーアバター",
 	"author": "Gakuto1112",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"autoScripts": [
 		"scripts/avatar.lua"
 	],
