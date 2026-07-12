@@ -1,4 +1,5 @@
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .DS_Store
 avatar.code-workspace
 .luarc.json
