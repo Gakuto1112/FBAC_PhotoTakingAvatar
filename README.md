@@ -97,12 +97,14 @@
 紹介するMODは[Fabric](https://fabricmc.net)を使用する場合のものです。
 [Forge](https://files.minecraftforge.net/net/minecraftforge/forge/)など、他のMODローダーを使用する場合は、適宜代替品のMODを使用してください。
 
+<!-- markdownlint-disable MD033 -->
 | MOD名 | 説明 | URL |
 | --- | --- | --- |
 | Iris Shaders | いわゆる影MODです。日光や水面反射などをリアルにシミュレートし、マインクラフトの世界を、息を呑むぐらい美しくします。<br>シェーダーパックの使用にはそれなりのスペックのPCが必要ですが、写真は静止画なので、フレームレートが低くなってしまっても気にはなりません。 | <https://irisshaders.dev> |
 | Complementary Shaders - Unbound | 実際にシェーダーを定義するパックの1つです。グラフィックが綺麗かつ自由にカスタマイズができるので特におすすめです。<br>なお、マインクラフトのバニラの雰囲気とバランスを取りたいなと感じる場合は[Complementary Shaders - Reimagined](https://modrinth.com/shader/complementary-reimagined)を使用してください。 | <https://modrinth.com/shader/complementary-unbound> |
 | Fabrishot | ゲームのウィンドウサイズやモニターの解像度に関係なく4K画像や任意の解像度の画像のスクリーンショットを撮影できます。 | <https://modrinth.com/mod/fabrishot> |
 | Freecam | プレイヤーの視点からカメラを外し、そのまま自由にカメラを動かせます。<br>写真の撮影位置を決めた後に、改めて俯瞰視点などから現場の様子を確認できます。 | <https://modrinth.com/mod/freecam> |
+<!-- markdownlint-enable MD033 -->
 
 ## トラブルシューティング
 
