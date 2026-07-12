@@ -53,7 +53,7 @@
    └ ...
    ```
 
-   （📁📁：ディレクトリ、📄：ファイル）
+   （📂📁：ディレクトリ、📄：ファイル）
 
 2. [`src/models/main.bbmodel`](./src/models/main.bbmodel)を[BlockBench](https://www.blockbench.net)で開きます。
    モデルファイルには`World`のモデルグループがあるため、その中にキャラクターのモデルグループを入れていきます。
