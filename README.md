@@ -33,30 +33,30 @@
 1. `src/`配下のファイル/ディレクトリ群は[Figuraアバターの形式](https://docs.figuramc.org/start_here/Avatar%20File%20Format)になっています。
   これらのファイル/ディレクトリをFiguraのアバターディレクトリ配下(通常は`${マインクラフトのゲームインスタンスディレクトリ}/figura/avatars/`)に新しいディレクトリを作成し、その配下に移動することで、Figuraにアバターとして認識されます。
 
-  ```text
-  ${マインクラフトのゲームインスタンスディレクトリ}
-  ├ 📂 figura
-  │ ├ 📂 avatars
-  │ │ ├ 📂 FBACPhotoTakingAvatar ← **このディレクトリを作成する。名前は何でも良い。**
-  | | | ├ 📁 models ← **以下`src/`内のファイル/ディレクトリをコピー**
-  | | | ├ 📁 scripts
-  | | | ├ 📁 textures
-  | | | └ 📄 avatar.json
-  | | ├ 📁 ${他のアバター1}
-  | | ├ 📁 ${他のアバター2}
-  | | └ ...
-  │ ├ 📁 cache
-  │ ├ 📁 config
-  | └ ...
-  ├ 📁 saves
-  ├ 📁 resourcepacks
-  └ ...
-  ```
+   ```text
+   ${マインクラフトのゲームインスタンスディレクトリ}
+   ├ 📂 figura
+   │ ├ 📂 avatars
+   │ │ ├ 📂 FBACPhotoTakingAvatar ← **このディレクトリを作成する。名前は何でも良い。**
+   | | | ├ 📁 models ← **以下`src/`内のファイル/ディレクトリをコピー**
+   | | | ├ 📁 scripts
+   | | | ├ 📁 textures
+   | | | └ 📄 avatar.json
+   | | ├ 📁 ${他のアバター1}
+   | | ├ 📁 ${他のアバター2}
+   | | └ ...
+   │ ├ 📁 cache
+   │ ├ 📁 config
+   | └ ...
+   ├ 📁 saves
+   ├ 📁 resourcepacks
+   └ ...
+   ```
 
-  （📁📁：ディレクトリ、📄：ファイル）
+   （📁📁：ディレクトリ、📄：ファイル）
 
 2. [`src/models/main.bbmodel`](./src/models/main.bbmodel)を[BlockBench](https://www.blockbench.net)で開きます。
-  モデルファイルには`World`のモデルグループがあるため、その中にキャラクターのモデルグループを入れていきます。
+   モデルファイルには`World`のモデルグループがあるため、その中にキャラクターのモデルグループを入れていきます。
 
    ![モデル構造](./docs/images/readme/model_structure.jpg)
 
