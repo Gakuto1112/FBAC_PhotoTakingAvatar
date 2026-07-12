@@ -4,10 +4,6 @@
 		"github.vscode-github-actions",
 		"sumneko.lua",
 		"davidanson.vscode-markdownlint",
-		"redhat.vscode-yaml",
-		"ms-python.vscode-pylance",
-		"ms-python.python",
-		"ms-python.debugpy",
-		"ms-python.vscode-python-envs"
+		"redhat.vscode-yaml"
 	]
 }
